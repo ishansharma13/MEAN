@@ -1,0 +1,18 @@
+<!-- PROPERTY BINDING: one can use squarebrackets to point to any variable and function in angular -->
+<mat-card>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" [(ngModel)]="val"/>
+
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="onAddPost()">Submit</button>
+</mat-card>
+<!-- <textarea row="6" [placeholder]="'placeholder'" #postInput [(ngModel)]="val"></textarea> -->
+<hr>
+
+<!-- SIMILAR TO JINJA, but no dictionary is added -->
+<!-- <p>{{newPost}}</p> -->
+<p>{{enteredValue+val}}</p>
+<!-- User Input: two ways -->
+<!-- Local Reference: #refname if added to any html element creates a reference to that element which can then be used in Angular -->
+<!-- TWO WAY BINDING: [(ngModel)] -->
